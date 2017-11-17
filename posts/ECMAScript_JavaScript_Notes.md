@@ -1,13 +1,14 @@
-﻿# ECMAScript (JavaScript) Notes
+# ECMAScript (JavaScript) Notes
 
 Notes and examples about ECMAScript (JavaScript) based on the following articles
 
 * [Learn ES2015](https://babeljs.io/learn-es2015/)
 * [A Re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) 
 * [ES6 in Depth](https://hacks.mozilla.org/category/es6-in-depth/)
+* [JS: ECMAScript 2015 Features](http://xahlee.info/js/js_ECMAScript_2015_features.html)
 * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS).
 
-Check the support for new features with your version of node at the [Compat Table](http://node.green/).
+Check the compatibility table for your version of [node ](http://node.green/) and [browser](http://kangax.github.io/compat-table/es6/).
 
 ## Types
 JavaScript Types 
@@ -78,7 +79,6 @@ isFinite(Infinity) // false
 ## Strings
 Supports full **Unicode**.
 ```js
-// 
 '你好'.length // 2
 "\u{20BB7}" // '𠮷'
 // new RegExp behaviour, opt-in ‘u’
@@ -145,7 +145,7 @@ NaN % 2 // NaN
 +true // 1
 +false // 0
 +null // 0
-+function(val){ return val} // NaN
++((val) => val) // NaN
 
 null + 1 // 1
 1 + undefined // NaN
@@ -297,7 +297,8 @@ let avg = (...args) => {
 avg(2, 3, 4, 5); // 3.5
 
 // named IIFEs (Immediately Invoked Function Expressions)
-// give a name to the function to use recursion
+// like a anonymous function with a name
+// useful in recursions 
 let averageNumber = ((...args) => {
     let sum = 0
     for (let i = 0; i < args.length; i++) {
@@ -310,6 +311,7 @@ console.log(averageNumber) // 3.5
 // ES3025: convert arguments to a real Array
 const args = Array.from(arguments) 
 ```
+More on [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Custom objects
 ```js
