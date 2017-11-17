@@ -107,7 +107,7 @@ Boolean('') // false
 `const`: const variables cannot be reassigned, but their properties can still be mutated.
 `var`: traditionally the only var type. Not preferred.  
 
-Rule:  **(need to reassign) ? use `const` : use `let`**.
+Rule:  **(need to reassign) ? use `let` : use `const`**.
 
 The type of declared variable without value is `undefined`.
 
