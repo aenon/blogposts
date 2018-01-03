@@ -28,11 +28,8 @@ console.log('Test passed!')
 
 ```
 
-<<<<<<< HEAD
 if the reducer receive undefined state argument, returns initial state of application.
 
-## localStorage
-=======
 ## App structure
 
 ```js
@@ -116,5 +113,4 @@ function makeDoggy(e) {e.target.setAttribute('src', 'IMGURL');}
 * cannot use `if`
 * using ternary operator is ok
 * user-defined componengs must be capitalized
->>>>>>> refs/remotes/origin/master
 
