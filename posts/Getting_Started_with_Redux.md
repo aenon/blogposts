@@ -1,3 +1,51 @@
+# React
+
+## JSX
+
+* include `/` in self-closing tabs.
+* exactly one outermost element per JSX expression.
+* className
+* evaluate js in jsx with `{}`
+```babel
+function makeDoggy(e) {e.target.setAttribute('src', 'IMGURL');}
+```
+
+* cannot use `if`
+* using ternary operator is ok
+* using && 
+```babel
+{Math.random() < 0.5 && <li>that item</li>}
+```
+
+* key: JSX attribute
+```babel
+<li key={'person_' + i}>{person}</li>
+```
+
+* user-defined componengs must be capitalized
+
+## React without JSX
+
+```babel
+const h1 = <h1>Hello world</h1>;
+```
+
+```javascript
+// React.createElement(
+//   type,
+//   [props],
+//   [...children]
+// )
+
+const h1 = React.createElement(
+  "h1",
+  null,
+  "Hello, world"
+);
+```
+
+## Component
+
 # Getting started with Redux
 
 Redux 
@@ -95,18 +143,4 @@ const render = () => {
 ```
 
 ## expect and deep-freeze
-
-## JSX
-
-* include `/` in self-closing tabs.
-* exactly one outermost element per JSX expression.
-* className
-* evaluate js in jsx with `{}`
-```jsx
-function makeDoggy(e) {e.target.setAttribute('src', 'IMGURL');}
-```
-
-* cannot use `if`
-* using ternary operator is ok
-* user-defined componengs must be capitalized
 
