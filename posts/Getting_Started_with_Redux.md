@@ -95,3 +95,17 @@ const render = () => {
 ```
 
 ## expect and deep-freeze
+
+## JSX
+
+* include `/` in self-closing tabs.
+* exactly one outermost element per JSX expression.
+* className
+* evaluate js in jsx with `{}`
+```jsx
+function makeDoggy(e) {e.target.setAttribute('src', 'IMGURL');}
+```
+
+* cannot use `if`
+* user-defined componengs must be capitalized
+
