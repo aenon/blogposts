@@ -107,5 +107,6 @@ function makeDoggy(e) {e.target.setAttribute('src', 'IMGURL');}
 ```
 
 * cannot use `if`
+* using ternary operator is ok
 * user-defined componengs must be capitalized
 
