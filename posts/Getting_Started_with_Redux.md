@@ -11,6 +11,8 @@ Store -> Provider -> Containers -> Components -> User -> Actions -> Reducers -> 
 
 * Reducer: pure functions - no side effect. Reducer calculates new state with old state and the action.
 
+## Writing a counter
+
 Test the function with expect
 
 ```js
@@ -25,4 +27,8 @@ expect (
 console.log('Test passed!')
 
 ```
+
+if the reducer receive undefined state argument, returns initial state of application.
+
+## localStorage
 
