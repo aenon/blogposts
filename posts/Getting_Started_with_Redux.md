@@ -1,3 +1,30 @@
+## React Component
+[Reference](https://reactjs.org/docs/react-component.html)
+```babel
+class MyComponentClass extends React.Component {
+  render() {
+    return <h1>Hello world</h1>;
+  }
+}
+
+ReactDOM.render(
+  <MyComponentClass />, 
+  document.getElementById('app')
+);
+```
+
+```babel
+class Button extends React.Component {
+  scream() {
+    alert('AAAAAAAAHHH!!!!!');
+  }
+
+  render() {
+    return <button onClick = {this.scream}>AAAAAH!</button>;
+  }
+}
+```
+
 # Getting started with Redux
 
 Redux 
