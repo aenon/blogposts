@@ -44,11 +44,56 @@ const h1 = React.createElement(
 );
 ```
 
-## Component
+## React Component
+[Reference](https://reactjs.org/docs/react-component.html)
+```babel
+class MyComponentClass extends React.Component {
+  render() {
+    return <h1>Hello world</h1>;
+  }
+}
 
-# Getting started with Redux
+ReactDOM.render(
+  <MyComponentClass />, 
+  document.getElementById('app')
+);
+```
 
-Redux 
+```babel
+class Button extends React.Component {
+  scream() {
+    alert('AAAAAAAAHHH!!!!!');
+  }
+
+  render() {
+    return <button onClick = {this.scream}>AAAAAH!</button>;
+  }
+}
+```
+## import and export 
+
+```babel
+import {Navbar} from './NavBar';
+```
+```babel
+export class NavBar extends React.Component {
+  render () {
+
+  }
+}
+
+
+immutability with `slice()`
+```babel
+const squares = this.state.squares.slice();
+squares[i] = 'X';
+this.setState({squares: squares});
+```
+
+
+
+
+# Redux
 
 Store -> Provider -> Containers -> Components -> User -> Actions -> Reducers -> Store...
 
@@ -58,6 +103,8 @@ Store -> Provider -> Containers -> Components -> User -> Actions -> Reducers -> 
 * State is redundant. All changes must be done with __actions__ - JS objects describing what is changed. Use strings as action type.
 
 * __Reducer__: pure functions - no side effect. Reducer calculates new state with old state and the action.
+
+## Writing a counter
 
 Test the function with expect
 
@@ -73,6 +120,8 @@ expect (
 console.log('Test passed!')
 
 ```
+
+if the reducer receive undefined state argument, returns initial state of application.
 
 ## App structure
 
