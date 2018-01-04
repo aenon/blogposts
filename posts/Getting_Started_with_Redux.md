@@ -90,6 +90,8 @@ squares[i] = 'X';
 this.setState({squares: squares});
 ```
 
+## this.props
+
 
 
 
