@@ -92,8 +92,74 @@ this.setState({squares: squares});
 
 ## this.props
 
+pass variables and functions
 
+```babel
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hi there, {this.props.name}!</h1>
+    );
+  }
+}
 
+ReactDOM.render(
+  <Greeting name='Groberta' />, 
+  document.getElementById('app')
+);
+```
+
+this.props.children: content between opening and closing JSX tags
+
+```babel
+<MyComponent>Childrenhere</MyComponent>
+```
+
+## this.state
+
+component maintains its own state
+
+```babel
+constructor(props) {
+  super(props); // important
+  this.state = {mood: 'decent'};
+}
+```
+
+changes state by `this.setState()`
+
+```babel
+this.setState({
+  hungry: true
+})
+```
+
+Use `this` in a method:
+```babel
+this.methodName = this.methodName.bind(this) 
+```
+
+## Pass a Component's State
+
+```babel
+class Parent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {name: 'Lucky'}; // the state of Parent
+  }
+  render() {
+    return <Child name={this.state.name} />;
+  }
+}
+class Child extends React.Component {
+  render() {
+    return <h1>Hello, my name is {this.props.name}</h1>; // the prop of Child
+  }
+}
+```
+
+`props` are used to store information that can only be changed by other components
+`state` is used to store information that can be changed by the component itself.
 
 # Redux
 
