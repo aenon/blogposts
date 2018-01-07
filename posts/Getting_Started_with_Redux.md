@@ -161,6 +161,24 @@ class Child extends React.Component {
 `props` are used to store information that can only be changed by other components
 `state` is used to store information that can be changed by the component itself.
 
+## update parent state
+
+Parent: pass handle function to Child
+`<Child name={this.state.name} onChange={this.changeName} />`
+Child: define a handleChange function that can be passed an event object
+```babel
+  handleChange(e) {
+    const name = e.target.value; // important
+    this.props.onChange(name);
+  }
+  render() {
+    <button onClick={this.handleChange}> </button>
+  }
+```
+
+## styles
+
+
 # Redux
 
 Store -> Provider -> Containers -> Components -> User -> Actions -> Reducers -> Store...
