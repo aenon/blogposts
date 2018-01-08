@@ -161,7 +161,7 @@ class Child extends React.Component {
 `props` are used to store information that can only be changed by other components
 `state` is used to store information that can be changed by the component itself.
 
-## update parent state
+## Update parent state
 
 Parent: pass handle function to Child
 `<Child name={this.state.name} onChange={this.changeName} />`
@@ -176,7 +176,41 @@ Child: define a handleChange function that can be passed an event object
   }
 ```
 
-## styles
+## Styles
+
+```babel
+const styleMe = <h1 style={{ background: 'lightblue', color: 'darkred' }}>Please style me! I am so bland!</h1>;
+```
+
+Inject css into a `JSX` element with a `JavaScript` object.
+
+Style names are written in camelCase. 
+
+`"20px"` can be written as a number `20`.
+
+```babel
+const styles = {
+  marginTop: 20,
+  backgroundColor: "green"
+};
+```
+
+### Styles in a JavaScript file
+```babel
+// style.js
+export const styles = {
+  marginTop: 20,
+  backgroundColor: "green"
+};
+```
+
+and used in other files
+```babel
+// app.js
+import {styles} from './style.js'
+```
+
+## Container / Presentational Components
 
 
 # Redux
