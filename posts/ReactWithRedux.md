@@ -124,7 +124,7 @@ this.props.children: content between opening and closing JSX tags
 component maintains its own state
 
 ```babel
-constructor(props) {
+constructor(props) { // sets the initial state
   super(props); // important
   this.state = {mood: 'decent'};
 }
@@ -218,15 +218,103 @@ import {styles} from './style.js'
 
 Seperate business logic from presentational logic.
 
-* Presentational components: render JSX
-* Container components: business logic
+* Presentational components: renders JSX. Only contains "render()" function.
+* Container components: business logic. imports the presentational components
 
 A presentational component is always rendered by a container Component
 
+### Functional Presentational Component
+```babel
+// A component class
+export class MyComponentClass extends React.Component {
+  render() {
+    return <h1>Hello world</h1>;
+  }
+}
+
+// A stateless functional component
+export const MyComponentClass = () => {
+  return <h1>Hello world</h1>;
+}
+```
+
+With props
+```babel
+// Normal way to display a prop using a variable:
+export class MyComponentClass extends React.component {
+  render() {
+    let title = this.props.title;
+    return <h1>{title}</h1>;
+  }
+}
+
+// Stateless functional component way to display a prop using a variable:
+export const MyComponentClass = (props) => {
+  let title = props.title;
+  return <h1>{title}</h1>;
+}
+```
+
+## PropsTypes
+
+```babel
+BestSeller.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  weeksOnList: React.PropTypes.number.isRequired
+}
+```
+
+```babel
+// same for stateless functional component
+GuineaPigs.propTypes = {
+  src: React.PropTypes.string.isRequired
+}
+```
+
+## React Forms
+
+```
+<input 
+  type="text" 
+  value={this.state.userInput}
+  onChange={this.handleUserInput} 
+/>
+```
+
+## Controlled / Uncontrolled Components
+
+A uncontrolled component maintains its own state.
+
+Prefer controlled components for Redux
+
+## Mounting Lifecycle Methods
+
+These methods are called in order:
+
+* componentWillMount
+* render
+* componentDidMount
+
+```babel
+componentWillMount() { // this runs only the first time the component is mounted
+  alert('AND NOW, FOR THE FIRST TIME EVER...  FLASHY!!!!');
+}
+```
+
+`componentDidMount` can be used to place AJAX calls or use `setTimeout` or `setInterval`.
+
+## Updating Lifecycle Methods and Unmounting Lifecycle Methods
+
+### Updating
+
+* componentWillReceiveProps
+* shouldComponentUpdate
+* componentWillUpdate
+* render
+* componentDidUpdate
 
 
-
-# Redux
+# Getting started with Redux
 
 Store -> Provider -> Containers -> Components -> User -> Actions -> Reducers -> Store...
 
