@@ -22,15 +22,19 @@ function makeDoggy(e) {e.target.setAttribute('src', 'IMGURL');}
 <li key={'person_' + i}>{person}</li>
 ```
 
-* user-defined componengs must be capitalized
+* user-defined components must be capitalized
 
 ## React without JSX
 
 ```babel
+// React with JSX
+
 const h1 = <h1>Hello world</h1>;
 ```
 
 ```javascript
+// React without JSX
+
 // React.createElement(
 //   type,
 //   [props],
@@ -182,7 +186,7 @@ Child: define a handleChange function that can be passed an event object
 const styleMe = <h1 style={{ background: 'lightblue', color: 'darkred' }}>Please style me! I am so bland!</h1>;
 ```
 
-Inject css into a `JSX` element with a `JavaScript` object.
+Inject css-like objects into a `JSX` element.
 
 Style names are written in camelCase. 
 
@@ -211,6 +215,15 @@ import {styles} from './style.js'
 ```
 
 ## Container / Presentational Components
+
+Seperate business logic from presentational logic.
+
+* Presentational components: render JSX
+* Container components: business logic
+
+A presentational component is always rendered by a container Component
+
+
 
 
 # Redux
