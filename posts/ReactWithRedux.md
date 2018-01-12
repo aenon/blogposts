@@ -303,15 +303,19 @@ componentWillMount() { // this runs only the first time the component is mounted
 
 `componentDidMount` can be used to place AJAX calls or use `setTimeout` or `setInterval`.
 
-## Updating Lifecycle Methods and Unmounting Lifecycle Methods
+## Updating Lifecycle Methods
 
-### Updating
-
-* componentWillReceiveProps
-* shouldComponentUpdate
-* componentWillUpdate
+* componentWillReceiveProps: `nextProps`
+* shouldComponentUpdate: component will not update if `shouldComponentUpdate` returns false
+* componentWillUpdate: `nextProps` and `nextState`
 * render
-* componentDidUpdate
+* componentDidUpdate: `prevProps` and `prevState`
+
+## Unmounting Lifecycle Methods
+
+`componentWillUnmount`: 
+
+`Unmount`: not `umount`.
 
 
 # Getting started with Redux
