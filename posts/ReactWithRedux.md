@@ -224,6 +224,9 @@ Seperate business logic from presentational logic.
 A presentational component is always rendered by a container Component
 
 ### Functional Presentational Component
+
+more concise
+
 ```babel
 // A component class
 export class MyComponentClass extends React.Component {
