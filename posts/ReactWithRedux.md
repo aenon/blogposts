@@ -85,7 +85,7 @@ export class NavBar extends React.Component {
 
   }
 }
-
+```
 
 immutability with `slice()`
 ```babel
