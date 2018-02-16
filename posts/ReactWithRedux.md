@@ -225,7 +225,7 @@ A presentational component is always rendered by a container Component
 
 ### Functional Presentational Component
 
-more concise
+More concise
 
 ```babel
 // A component class
